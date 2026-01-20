@@ -287,7 +287,7 @@ export const MOCK_PRODUCTS: Product[] = [
 - 🖼️ Next.js Image para otimização automática
 - 📦 Code splitting automático
 - 🎯 Lazy loading de componentes
-- 💾 Memoização com useMemo/useCallback
+- 💾 Memorização com useMemo/useCallback
 
 ## 📄 Licença
 
