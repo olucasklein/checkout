@@ -1,4 +1,4 @@
-# 🛒 Checkout Flow - Sistema de Checkout Moderno
+# 🛒 Sistema de Checkout Moderno
 
 Um sistema de checkout completo e moderno desenvolvido com Next.js 16, React, TypeScript e Tailwind CSS. Oferece uma experiência de usuário fluida e intuitiva com animações 3D, internacionalização e alta customização.
 
@@ -235,23 +235,6 @@ export const MOCK_PRODUCTS: Product[] = [
 ];
 ```
 
-## 🌐 Adicionar Novo Idioma
-
-1. Edite `/src/i18n/translations.ts`:
-```typescript
-export type Locale = 'pt' | 'en' | 'es';
-
-export const translations = {
-  // ... pt, en
-  es: {
-    header: { checkout: 'Compra' },
-    // ... traduções em espanhol
-  }
-};
-```
-
-2. Atualize o LanguageSwitch para incluir o novo idioma
-
 ## 📝 Validações Implementadas
 
 ### Cartão de Crédito
@@ -306,44 +289,7 @@ export const translations = {
 - 🎯 Lazy loading de componentes
 - 💾 Memoização com useMemo/useCallback
 
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👨‍💻 Autor
-
-Desenvolvido com ❤️ usando as melhores práticas de desenvolvimento web moderno.
-
----
-
-## 🎯 Roadmap Futuro
-
-- [ ] Integração com gateways de pagamento reais (Stripe, PayPal, PagSeguro)
-- [ ] Autenticação de usuários
-- [ ] Histórico de pedidos
-- [ ] Notificações por email
-- [ ] Dashboard administrativo
-- [ ] Testes unitários e E2E
-- [ ] Modo escuro (dark mode)
-- [ ] PWA (Progressive Web App)
-- [ ] Análise e tracking de conversão
-- [ ] A/B testing framework
-
-## 📞 Suporte
-
-Para reportar bugs ou solicitar features, abra uma issue no repositório.
-
----
-
-**Desenvolvido com Next.js 16 🚀 | React 19 ⚛️ | TypeScript 💙 | Tailwind CSS 🎨**
 
