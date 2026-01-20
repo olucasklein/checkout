@@ -4,6 +4,12 @@ Um sistema de checkout completo e moderno desenvolvido com Next.js 16, React, Ty
 
 <img src="public/example.png" width="100%" />
 
+<p align="center">
+  🌐 <a href="https://checkout-pi.vercel.app/" target="_blank">
+    <b>Ver Preview</b>
+  </a>
+</p>
+
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.4-black)
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
