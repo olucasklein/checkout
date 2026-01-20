@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
+/* Theme Variables - Customize here */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --theme-primary: #4f46e5;
+  --theme-primary-hover: #4338ca;
+  --theme-primary-light: #6366f1;
+  --theme-primary-dark: #3730a3;
+  
+  /* Background Colors */
+  --theme-bg-base: #ffffff;
+  --theme-bg-secondary: #f8fafc;
+  --theme-bg-gradient-from: #f8fafc;
+  --theme-bg-gradient-via: #ffffff;
+  --theme-bg-gradient-to: #eef2ff;
+  
+  /* Text Colors */
+  --theme-text-primary: #0f172a;
+  --theme-text-secondary: #64748b;
+  --theme-text-muted: #94a3b8;
+  
+  /* Border Colors */
+  --theme-border: #e2e8f0;
+  --theme-border-focus: #6366f1;
+  
+  /* Success Colors */
+  --theme-success: #10b981;
+  --theme-success-light: #d1fae5;
+  
+  /* Error Colors */
+  --theme-error: #ef4444;
+  --theme-error-light: #fee2e2;
+  
+  /* Warning Colors */
+  --theme-warning: #f59e0b;
+  --theme-warning-light: #fef3c7;
+  
+  /* Spacing */
+  --theme-radius: 0.75rem;
+  --theme-radius-sm: 0.5rem;
+  --theme-radius-lg: 1rem;
+  
+  /* Shadows */
+  --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Background with CSS variables */
+body {
+  background: var(--theme-bg-base);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Smooth focus transitions */
+input:focus,
+select:focus,
+button:focus {
+  transition: all 0.2s ease;
+}
+
+/* Better text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Card flip animation for payment preview */
+.card-flip {
+  perspective: 1000px;
+}
+
+.card-flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(10deg);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Selection color */
+::selection {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {  appearance: textfield;  -moz-appearance: textfield;
+}
+
+/* Mobile touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  input,
+  select {
+    min-height: 44px;
+  }
 }
