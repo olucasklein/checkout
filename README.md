@@ -2,6 +2,8 @@
 
 Um sistema de checkout completo e moderno desenvolvido com Next.js 16, React, TypeScript e Tailwind CSS. Oferece uma experiência de usuário fluida e intuitiva com animações 3D, internacionalização e alta customização.
 
+<img src="public/example.png" width="100%" />
+
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.4-black)
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
